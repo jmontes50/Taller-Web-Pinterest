@@ -1,0 +1,132 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid gray; */
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    width: 32px;
+    margin: 20px;
+}
+
+.header input {
+    height: 36px;
+    border-radius: 4px;
+    background-color: #efefef;
+    color: gray;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+    /* padding: valY valX */
+    padding: 0 20px;
+    /* crece todo lo que puedas */
+    flex-grow: 1;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons img {
+    width: 25px;
+    margin: 20px;
+}
+
+/* contenido */
+
+.tile-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 900px;
+    /* para que entren los elementos */
+    height: 100vh;
+    /* margin:valY valX */
+    margin: 0 auto;
+}
+
+.tile {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.tile:hover {
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.tile img {
+    border-radius: 8px;
+}
+
+.tile .overlay {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    padding: 15px;
+}
+
+/* cuando ponga el mouse encima */
+.tile:hover .overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tile .overlay img {
+    width: 40px;
+    background-color: #efefef;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tile .overlay button {
+    background-color: #bd081d;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.tile-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.tile-bottom img {
+    width: 16px;
+    margin-right: 14px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.tile-bottom p {
+    font-weight: bold;
+    color: gray;
+    font-size: 14px;
+}
